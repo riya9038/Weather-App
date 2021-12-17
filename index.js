@@ -4,14 +4,24 @@ var inputbox= document.getElementById("search");
 var search= document.getElementById("search-btn");
 var city= document.getElementById("cityName");
 search.addEventListener("click", fetchWeather);
+let data= document.getElementById("data");
 // city.addEventListener("click", fetchWeatherInfo);
 
 var arr=[];
 var bool= true;
+if(arr.length<1){
+    data.innerHTML="No data here..";
+}
 
 async function fetchWeather(){
 
     let name= inputbox.value;
+    if(arr.length<1){
+        data.innerHTML="No data here..";
+    }
+    else{
+        data.innerHTML="";
+    }
 
     for(let i=0;i<arr.length;i++)
     {
@@ -32,6 +42,7 @@ async function fetchWeather(){
 
     if(bool){
         arr.push(name);
+        
         console.log("after",arr);
         console.log("after",bool);
         let url= `https://python3-dot-parul-arena-2.appspot.com/test?cityname=${name}`;

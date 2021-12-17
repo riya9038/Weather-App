@@ -1,6 +1,11 @@
 header{
     background-color: blue;
     height:100px;
+    text-align: center;
+    font-size: 2rem;
+    color:white;
+    font-weight: 900;
+    font-family: sans-serif;
 }
 #container{
     background-color: grey;
@@ -9,17 +14,24 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
 }
 .left{
     width:30%;
-    height:95%;
+    height:100%;
     background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 #tab{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    margin:10px;
 }
 #tab button{
     width:200px;
@@ -32,16 +44,21 @@ header{
     width:70%;
     height:100%;
     background-color: beige;
-    border-left: 1px solid black;
+    border-left: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .details{
     width:90%;
     height:90%;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     display: flex;
     align-items: center;
     justify-content: center; 
     flex-direction: column;
+    margin:20px;
 }
 .headings{
     width:90%;
@@ -52,14 +69,16 @@ header{
     height: 90%;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center; 
+    padding: 0px; 
 }
 #title li{
     width:25%;
     height: 100%;
-    background-color: blue;
+    background-color: lightseagreen;
     list-style: none;
     border:1px solid black;
+    text-align: center;
 }
 .info{
     width:90%;
@@ -82,9 +101,10 @@ header{
     align-items: center;
     justify-content: center;  
     margin:0px;
+    margin-bottom: 10px;
 }
 .data-list li{
-    width:25%;
+    width:28%;
     height: 100%;
     background-color: lightgrey;
     list-style: none;
@@ -92,7 +112,7 @@ header{
 }
 #desc-text{
     width:95%;
-    height: 20px;;
+    height: 25px;;
 }
 @keyframes highlight {
     0% {
