@@ -90,10 +90,17 @@ async function fetchWeather(){
         console.log("del",del);
 
         function deleteList(){
+            const newArr=[];
             console.log("hi");
             let btn= document.getElementById(`del${name}`);
             btn.parentElement.remove();
-            
+
+            for(let k=0;k<arr.length;k++){
+                if(arr[k]!== name)
+                newArr.push(arr[k]);
+            }
+            console.log("new",newArr);
+            arr=newArr;
         }
 
     }
@@ -183,11 +190,17 @@ async function fetchWeatherInfo(name,event){
         console.log("del",del);
 
         function deleteList(){
+            const newArr=[];
             console.log("hi");
-        
             let btn= document.getElementById(`del${name}`);
             btn.parentElement.remove();
-            
+
+            for(let k=0;k<arr.length;k++){
+                if(arr[k]!== name)
+                newArr.push(arr[k]);
+            }
+            console.log("new",newArr);
+            arr=newArr;
         }
 
     }
