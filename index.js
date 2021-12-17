@@ -13,27 +13,22 @@ async function fetchWeather(){
 
     let name= inputbox.value;
 
-    for(var i=0;i<arr.length;i++)
+    for(let i=0;i<arr.length;i++)
     {
         if(arr[i]===name){
             bool=false;
             let cityList= document.getElementById(name);
-            console.log(cityList);
-            console.log(cityList.children);
 
-            for(var j=0;j<cityList.childElementCount;j++){
+            for(let j=0;j<cityList.childElementCount;j++){
                 cityList.children[j].classList.add("highlight");
+
                 setTimeout(function () {
-                    //console.log("cityList.children[j].classList",cityList.children[j].classList);
-                    // cityList.children[j].classList.remove("highlight");
+                    cityList.children[j].classList.remove("highlight");
                 }, 2000);
             }
 
         }
     }
-    console.log("before",arr);
-    console.log("before",bool);
-
 
     if(bool){
         arr.push(name);
@@ -96,10 +91,9 @@ async function fetchWeather(){
 
         function deleteList(){
             console.log("hi");
-        
             let btn= document.getElementById(`del${name}`);
             btn.parentElement.remove();
-
+            
         }
 
     }
@@ -112,7 +106,19 @@ async function fetchWeatherInfo(name,event){
     for(var i=0;i<arr.length;i++)
     {
         if(arr[i]===name){
-        bool=false;
+            bool=false;
+            let cityList= document.getElementById(name);
+            console.log(cityList);
+            console.log(cityList.children);
+
+            for(var j=0;j<cityList.childElementCount;j++){
+                cityList.children[j].classList.add("highlight");
+                setTimeout(function () {
+                    //console.log("cityList.children[j].classList",cityList.children[j].classList);
+                    cityList.children[j].classList.remove("highlight");
+                }, 2000);
+            }
+
         }
     }
 
